@@ -56,7 +56,14 @@ lib
 bin
 packages
 build/
-examples/data
+examples/data/vector_packing
+examples/data/rcpsp
+examples/data/binpacking
+examples/data/spp
+examples/data/scp
+examples/data/shift_scheduling
+examples/data/roadef_challenge_2011
+examples/data/cvrptw
 
 # Editor directories and files
 *.user
