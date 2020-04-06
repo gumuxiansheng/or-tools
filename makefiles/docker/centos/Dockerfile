@@ -6,7 +6,7 @@ LABEL maintainer="corentinl@google.com"
 ENV PATH=/usr/local/bin:$PATH
 RUN yum -y update \
 && yum -y install \
- git wget which openssl-devel pkgconfig \
+ git wget which redhat-lsb-core openssl-devel pkgconfig autoconf libtool zlib-devel \
 && yum -y groupinstall "Development Tools" \
 && yum clean all \
 && rm -rf /var/cache/yum
