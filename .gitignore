@@ -74,3 +74,7 @@ examples/dotnet/obj
 
 # Release key
 tools/docker/or-tools.snk
+
+# IDE
+.project
+.settings/org.eclipse.m2e.core.prefs
