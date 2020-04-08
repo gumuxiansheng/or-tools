@@ -66,7 +66,7 @@ message(STATUS "Build Java: ${BUILD_JAVA}")
 option(BUILD_DOTNET "Build .NET Library" OFF)
 message(STATUS "Build .Net: ${BUILD_DOTNET}")
 
-option(BUILD_EXAMPLES "Build examples" ON)
+option(BUILD_EXAMPLES "Build examples" OFF)
 message(STATUS "Build examples: ${BUILD_EXAMPLES}")
 
 #option(BUILD_DOC "Build doxygen" OFF)
@@ -106,7 +106,7 @@ CMAKE_DEPENDENT_OPTION(BUILD_Protobuf "Build the Protobuf dependency Library" OF
 message(STATUS "Build protobuf: ${BUILD_Protobuf}")
 
 # Optional third party solvers (enabled by default)
-option(USE_COINOR "Use the COIN-OR solver" ON)
+option(USE_COINOR "Use the COIN-OR solver" OFF)
 message(STATUS "COIN-OR support: ${USE_COINOR}")
 
 if(USE_COINOR)
