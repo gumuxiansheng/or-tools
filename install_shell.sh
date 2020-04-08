@@ -1,0 +1,1 @@
+make DESTDIR=../ortoolsbuildx install_cc
