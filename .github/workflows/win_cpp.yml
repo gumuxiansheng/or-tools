@@ -11,15 +11,15 @@ jobs:
     - name: Check cmake
       run: cmake --version
     - name: Configure
-      run: cmake -S. -Bbuild -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE=Release -DBUILD_DEPS=ON
+      run: cmake -S. -Bbuild -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE=Release -DBUILD_DEPS=ON -DCMAKE_INSTALL_PREFIX=D:/a/or-tools/or-tools/ortools
     - name: Build
       run: cmake --build build --config Release --target ALL_BUILD -- /maxcpucount
     # - name: Test
     #   run: cmake --build build --config Release --target RUN_TESTS -- /maxcpucount
     - name: Install
-      run: cmake --build build --config Release --target INSTALL -- DESTDIR=./installx
+      run: cmake --build build --config Release --target INSTALL -- /maxcpucount
     - name: Archive
       uses: actions/upload-artifact@v1
       with:
         name: ortools-windows-x64-7.5
-        path: ./installx
+        path: ./install

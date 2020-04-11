@@ -16,7 +16,7 @@ jobs:
     - name: Test
       run: cmake --build build --config Release --target test -v
     - name: Install
-      run: cmake --build build --config Release --target install -v -- DESTDIR=./install
+      run: cmake --build build --config Release --target install -v -DCMAKE_INSTALL_PREFIX=/Users/runner/runners/2.168.0/work/or-tools/or-tools/install
     - name: Archive
       uses: actions/upload-artifact@v1
       with:
