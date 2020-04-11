@@ -17,4 +17,4 @@ jobs:
     - name: Test
       run: cmake --build build --config Release --target RUN_TESTS -- /maxcpucount
     - name: Install
-      run: cmake -DCMAKE_INSTALL_PREFIX=..\..\installx --build build --config Release --target INSTALL -- /maxcpucount
+      run: cmake --build build --config Release --target INSTALL -- DESTDIR=../../installx
